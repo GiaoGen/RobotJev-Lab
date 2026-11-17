@@ -1,0 +1,103 @@
+{
+  "python": "3.12.10",
+  "mujoco": "4.0.1",
+  "model_commit": "370c43965323c0944b433b202aac5058b5f907a9",
+  "asset_hashes_verified": 73,
+  "joint_names": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6",
+    "joint7",
+    "finger_joint1",
+    "finger_joint2"
+  ],
+  "actuators": [
+    {
+      "name": "actuator1",
+      "control_range": [
+        -2.8973,
+        2.8973
+      ]
+    },
+    {
+      "name": "actuator2",
+      "control_range": [
+        -1.7628,
+        1.7628
+      ]
+    },
+    {
+      "name": "actuator3",
+      "control_range": [
+        -2.8973,
+        2.8973
+      ]
+    },
+    {
+      "name": "actuator4",
+      "control_range": [
+        -3.0718,
+        -0.0698
+      ]
+    },
+    {
+      "name": "actuator5",
+      "control_range": [
+        -2.8973,
+        2.8973
+      ]
+    },
+    {
+      "name": "actuator6",
+      "control_range": [
+        -0.0175,
+        3.7525
+      ]
+    },
+    {
+      "name": "actuator7",
+      "control_range": [
+        -2.8973,
+        2.8973
+      ]
+    },
+    {
+      "name": "actuator8",
+      "control_range": [
+        0.0,
+        255.0
+      ]
+    }
+  ],
+  "home_test": {
+    "steps": 1000,
+    "sim_time_s": 2.0000000000000013,
+    "finite": true,
+    "max_arm_target_error_rad": 0.006581714241370611
+  },
+  "joint_target_test": {
+    "actuator": "actuator1",
+    "target_rad": 0.1,
+    "actual_rad_after_2s": 0.09999999988978364,
+    "hand_displacement_m": 0.055899997107894436
+  },
+  "gripper_closed_finger_positions_m": [
+    4.7809178507493694e-08,
+    -9.3937005871702e-10
+  ],
+  "offscreen_render": {
+    "shape": [
+      240,
+      320,
+      3
+    ],
+    "pixel_range": [
+      13,
+      255
+    ]
+  },
+  "scope": "Official model loading and isolated control checks. Interactive Studio operation and grasping await validation."
+}

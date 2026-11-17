@@ -1,0 +1,8 @@
+{
+  "model_scene": "assets/robots/franka_emika_panda/scene.xml",
+  "controller": {},
+  "scene": {},
+  "grasp": {},
+  "verification": {},
+  "placement": {}
+}

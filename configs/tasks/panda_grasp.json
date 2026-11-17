@@ -1,0 +1,23 @@
+{
+  "model_scene": "assets/robots/franka_emika_panda/scene.xml",
+  "controller": {},
+  "scene": {},
+  "grasp": {
+    "approach_height_m": 0.12,
+    "lift_height_m": 0.12,
+    "close_timeout_s": 1.5,
+    "contact_window_s": 0.15,
+    "contact_loss_timeout_s": 0.15,
+    "verify_timeout_s": 2.0,
+    "normal_gripper_force_n": 100.0,
+    "weak_gripper_force_n": 0.3,
+    "empty_offset_xy_m": [0.0, 0.09]
+  },
+  "verification": {
+    "minimum_contact_force_n": 0.02,
+    "minimum_clearance_m": 0.05,
+    "stable_window_s": 0.5,
+    "maximum_relative_position_drift_m": 0.003,
+    "maximum_relative_angle_drift_rad": 0.1
+  }
+}

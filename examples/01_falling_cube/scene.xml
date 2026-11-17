@@ -1,0 +1,34 @@
+<mujoco model="Lesson 01 - Falling cube">
+  <!-- 物理时间每步前进 0.002 秒。Z 轴向上，重力沿 Z 轴负方向。 -->
+  <option timestep="0.002" gravity="0 0 -9.81"/>
+
+  <!-- 相机观察范围。显示速度由 Studio 左侧的 Speed 控件设置。 -->
+  <statistic center="0 0 0.35" extent="1.0"/>
+  <visual>
+    <global azimuth="135" elevation="-20"/>
+  </visual>
+
+  <!-- 棋盘纹理帮助辨认地面。这里定义资源，下面的 geom 使用它。 -->
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" width="256" height="256"
+             rgb1="0.22 0.27 0.32" rgb2="0.32 0.38 0.44"/>
+    <material name="floor_material" texture="grid" texrepeat="8 8"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 -1 2" dir="0 0 -1"/>
+
+    <!-- 地面位于 Z=0。plane 提供碰撞与支撑。 -->
+    <geom name="floor" type="plane" size="1 1 0.1" material="floor_material"/>
+
+    <!-- 第一次练习只改这一行的 0.60，它是方块中心的初始高度，单位米。 -->
+    <body name="cube" pos="0 0 0.60">
+      <!-- freejoint 允许方块自由平移和旋转。 -->
+      <freejoint name="cube_free"/>
+
+      <!-- box 的 size 是三个方向的半边长，因此边长是 0.10 米。 -->
+      <geom name="cube_geom" type="box" size="0.05 0.05 0.05"
+            mass="0.08" rgba="0.9 0.18 0.12 1"/>
+    </body>
+  </worldbody>
+</mujoco>

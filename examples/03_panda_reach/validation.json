@@ -1,0 +1,34 @@
+{
+  "stage": "01 / step 2 / three Cartesian pose targets",
+  "python": "3.12.10",
+  "mujoco": "4.0.1",
+  "model_commit": "370c43965323c0944b433b202aac5058b5f907a9",
+  "source_files_verified": 73,
+  "config": "configs/tasks/panda_reach.json",
+  "target_orders_tested": 6,
+  "motions_succeeded": 18,
+  "maximum_stable_position_error_mm": 0.19042505357674708,
+  "maximum_stable_orientation_error_deg": 0.08087904174701417,
+  "order_regression_run": "runs/panda_reach/20261115T090711Z_e852120d",
+  "native_viewer_smoke": {
+    "result": "passed",
+    "run": "runs/panda_reach/20261115T090817Z_a68e05c9",
+    "checks": [
+      "viewer startup",
+      "coordinate frame geometry",
+      "text overlay",
+      "target A physical motion"
+    ]
+  },
+  "unittest": {
+    "tests": 8,
+    "result": "passed",
+    "entry": "python -B -m unittest discover -s tests -v"
+  },
+  "pending": [
+    "Operator keyboard interaction feedback",
+    "Tabletop grasping and holding verification",
+    "Browser workbench",
+    "A01-A04 full stage acceptance"
+  ]
+}

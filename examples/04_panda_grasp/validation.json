@@ -1,0 +1,105 @@
+{
+  "stage": "01 / step 3 / contact grasp and lift",
+  "environment": {
+    "python": "3.12.10",
+    "mujoco": "4.0.1"
+  },
+  "config": "configs/tasks/panda_grasp.json",
+  "same_configuration_reset_trials": 10,
+  "same_configuration_successes": 10,
+  "minimum_verified_bottom_clearance_m": 0.11703250278937233,
+  "minimum_verified_stable_window_s": 0.5199999999999427,
+  "maximum_relative_position_drift_m": 6.292436464688427e-06,
+  "sustained_hold_after_30s": {
+    "sim_time_s": 37.1219999999994,
+    "epoch": 10,
+    "step": 18561,
+    "execution_id": 10,
+    "status": "succeeded",
+    "phase": "held",
+    "reason": "physical_grasp_verified",
+    "scenario": "normal",
+    "paused": false,
+    "released": false,
+    "holding_lost": false,
+    "target_id": "lift",
+    "actual_position_m": [
+      0.4499535042420593,
+      -0.049995025726514424,
+      0.3409086593763
+    ],
+    "position_error_m": 0.000102614367615306,
+    "orientation_error_rad": 0.00017241326567647955,
+    "max_joint_speed_rad_s": 8.47679467259972e-10,
+    "gripper_force_limit_n": 100.0,
+    "cube_position_m": [
+      0.44995350819522645,
+      -0.050329143344271986,
+      0.3370548825999046
+    ],
+    "cube_height_m": 0.3370548825999046,
+    "bottom_clearance_m": 0.11701748623062785,
+    "left_contact_force_n": 0.9978600278580436,
+    "right_contact_force_n": 0.997823308157168,
+    "bilateral_contact": true,
+    "gripper_opening_m": 0.039913936155053696,
+    "relative_position_m": [
+      -0.0003341656153392795,
+      6.668844056890334e-07,
+      0.003853772557064823
+    ],
+    "relative_position_drift_m": 2.9000832913341074e-05,
+    "relative_angle_drift_rad": 0.0020376541410421175,
+    "stable_elapsed_s": 30.519999999999907,
+    "holding_confirmed": true
+  },
+  "empty_case": {
+    "status": "failed",
+    "reason": "no_bilateral_contact"
+  },
+  "weak_case": {
+    "status": "failed",
+    "reason": "holding_contact_lost"
+  },
+  "release": {
+    "before_cube_height_m": 0.3370780585832297,
+    "after_cube_height_m": 0.21989224458157863,
+    "holding_after_release": false
+  },
+  "attachment_constraints_added": 0,
+  "run": "runs/panda_grasp/20261115T095817Z_b857e441",
+  "regression_tests": {
+    "total": 18,
+    "passed": 18,
+    "grasp": 10,
+    "reach": 8
+  },
+  "operator_interaction": "pending",
+  "pose_input_assumption": "simulated_state_sensor_v0_exact_pose",
+  "pending_stage_work": [
+    "Carrying and placement",
+    "Carried-object path checks",
+    "Browser workbench",
+    "Isolated environment lock",
+    "Full A01-A04 acceptance"
+  ],
+  "low_friction_case": {
+    "coefficient": 0.05,
+    "status": "failed",
+    "reason": "holding_contact_lost",
+    "run": "runs/panda_grasp/20261115T095830Z_9186e5a5"
+  },
+  "source_files_verified": 73,
+  "model_commit": "370c43965323c0944b433b202aac5058b5f907a9",
+  "native_viewer_check": {
+    "status": "passed",
+    "run": "runs/panda_grasp/20261115T095903Z_396f1e7d",
+    "checks": [
+      "Native viewer startup",
+      "Current grasp telemetry overlay",
+      "Physics update while holding",
+      "Sustained contact display"
+    ],
+    "earlier_full_flow_run": "runs/panda_grasp/20261115T095438Z_46852d7a"
+  }
+}

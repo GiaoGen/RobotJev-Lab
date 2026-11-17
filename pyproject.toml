@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "decision-lab"
+version = "0.1.0"
+description = "Reproducible MuJoCo robot manipulation experiments"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "mujoco==4.0.1",
+    "numpy==2.5.4",
+]
+
+[project.scripts]
+decision-lab = "decision_lab.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
